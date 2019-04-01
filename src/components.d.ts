@@ -24,6 +24,9 @@ export namespace Components {
   interface MyHeaderAttributes extends StencilHTMLAttributes {
     'first'?: string;
   }
+
+  interface WeekDays {}
+  interface WeekDaysAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
@@ -31,12 +34,14 @@ declare global {
     'CalenderMonth': Components.CalenderMonth;
     'DatePicker': Components.DatePicker;
     'MyHeader': Components.MyHeader;
+    'WeekDays': Components.WeekDays;
   }
 
   interface StencilIntrinsicElements {
     'calender-month': Components.CalenderMonthAttributes;
     'date-picker': Components.DatePickerAttributes;
     'my-header': Components.MyHeaderAttributes;
+    'week-days': Components.WeekDaysAttributes;
   }
 
 
@@ -58,16 +63,24 @@ declare global {
     new (): HTMLMyHeaderElement;
   };
 
+  interface HTMLWeekDaysElement extends Components.WeekDays, HTMLStencilElement {}
+  var HTMLWeekDaysElement: {
+    prototype: HTMLWeekDaysElement;
+    new (): HTMLWeekDaysElement;
+  };
+
   interface HTMLElementTagNameMap {
     'calender-month': HTMLCalenderMonthElement
     'date-picker': HTMLDatePickerElement
     'my-header': HTMLMyHeaderElement
+    'week-days': HTMLWeekDaysElement
   }
 
   interface ElementTagNameMap {
     'calender-month': HTMLCalenderMonthElement;
     'date-picker': HTMLDatePickerElement;
     'my-header': HTMLMyHeaderElement;
+    'week-days': HTMLWeekDaysElement;
   }
 
 
