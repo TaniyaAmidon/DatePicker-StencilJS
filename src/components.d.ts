@@ -12,6 +12,9 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface DatePicker {}
+  interface DatePickerAttributes extends StencilHTMLAttributes {}
+
   interface MyHeader {
     'first': string;
   }
@@ -22,13 +25,21 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'DatePicker': Components.DatePicker;
     'MyHeader': Components.MyHeader;
   }
 
   interface StencilIntrinsicElements {
+    'date-picker': Components.DatePickerAttributes;
     'my-header': Components.MyHeaderAttributes;
   }
 
+
+  interface HTMLDatePickerElement extends Components.DatePicker, HTMLStencilElement {}
+  var HTMLDatePickerElement: {
+    prototype: HTMLDatePickerElement;
+    new (): HTMLDatePickerElement;
+  };
 
   interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {}
   var HTMLMyHeaderElement: {
@@ -37,10 +48,12 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'date-picker': HTMLDatePickerElement
     'my-header': HTMLMyHeaderElement
   }
 
   interface ElementTagNameMap {
+    'date-picker': HTMLDatePickerElement;
     'my-header': HTMLMyHeaderElement;
   }
 
