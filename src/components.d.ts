@@ -12,6 +12,9 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface CalenderMonth {}
+  interface CalenderMonthAttributes extends StencilHTMLAttributes {}
+
   interface DatePicker {}
   interface DatePickerAttributes extends StencilHTMLAttributes {}
 
@@ -25,15 +28,23 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'CalenderMonth': Components.CalenderMonth;
     'DatePicker': Components.DatePicker;
     'MyHeader': Components.MyHeader;
   }
 
   interface StencilIntrinsicElements {
+    'calender-month': Components.CalenderMonthAttributes;
     'date-picker': Components.DatePickerAttributes;
     'my-header': Components.MyHeaderAttributes;
   }
 
+
+  interface HTMLCalenderMonthElement extends Components.CalenderMonth, HTMLStencilElement {}
+  var HTMLCalenderMonthElement: {
+    prototype: HTMLCalenderMonthElement;
+    new (): HTMLCalenderMonthElement;
+  };
 
   interface HTMLDatePickerElement extends Components.DatePicker, HTMLStencilElement {}
   var HTMLDatePickerElement: {
@@ -48,11 +59,13 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'calender-month': HTMLCalenderMonthElement
     'date-picker': HTMLDatePickerElement
     'my-header': HTMLMyHeaderElement
   }
 
   interface ElementTagNameMap {
+    'calender-month': HTMLCalenderMonthElement;
     'date-picker': HTMLDatePickerElement;
     'my-header': HTMLMyHeaderElement;
   }
