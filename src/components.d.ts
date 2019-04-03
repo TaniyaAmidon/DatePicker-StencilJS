@@ -25,6 +25,9 @@ export namespace Components {
     'first'?: string;
   }
 
+  interface Test1 {}
+  interface Test1Attributes extends StencilHTMLAttributes {}
+
   interface WeekDays {}
   interface WeekDaysAttributes extends StencilHTMLAttributes {}
 }
@@ -34,6 +37,7 @@ declare global {
     'CalenderMonth': Components.CalenderMonth;
     'DatePicker': Components.DatePicker;
     'MyHeader': Components.MyHeader;
+    'Test1': Components.Test1;
     'WeekDays': Components.WeekDays;
   }
 
@@ -41,6 +45,7 @@ declare global {
     'calender-month': Components.CalenderMonthAttributes;
     'date-picker': Components.DatePickerAttributes;
     'my-header': Components.MyHeaderAttributes;
+    'test-1': Components.Test1Attributes;
     'week-days': Components.WeekDaysAttributes;
   }
 
@@ -63,6 +68,12 @@ declare global {
     new (): HTMLMyHeaderElement;
   };
 
+  interface HTMLTest1Element extends Components.Test1, HTMLStencilElement {}
+  var HTMLTest1Element: {
+    prototype: HTMLTest1Element;
+    new (): HTMLTest1Element;
+  };
+
   interface HTMLWeekDaysElement extends Components.WeekDays, HTMLStencilElement {}
   var HTMLWeekDaysElement: {
     prototype: HTMLWeekDaysElement;
@@ -73,6 +84,7 @@ declare global {
     'calender-month': HTMLCalenderMonthElement
     'date-picker': HTMLDatePickerElement
     'my-header': HTMLMyHeaderElement
+    'test-1': HTMLTest1Element
     'week-days': HTMLWeekDaysElement
   }
 
@@ -80,6 +92,7 @@ declare global {
     'calender-month': HTMLCalenderMonthElement;
     'date-picker': HTMLDatePickerElement;
     'my-header': HTMLMyHeaderElement;
+    'test-1': HTMLTest1Element;
     'week-days': HTMLWeekDaysElement;
   }
 

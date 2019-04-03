@@ -20,7 +20,7 @@ export class CalenderMonth {
           })}
           </div>
            <div class="weekday-container">
-           <week-days></week-days>
+           {/* <week-days></week-days> */}
            </div>
         </div>
       );
