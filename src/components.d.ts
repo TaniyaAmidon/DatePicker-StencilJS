@@ -12,88 +12,32 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface CalenderMonth {}
-  interface CalenderMonthAttributes extends StencilHTMLAttributes {}
-
-  interface DatePicker {}
-  interface DatePickerAttributes extends StencilHTMLAttributes {}
-
-  interface MyHeader {
-    'first': string;
-  }
-  interface MyHeaderAttributes extends StencilHTMLAttributes {
-    'first'?: string;
-  }
-
-  interface Test1 {}
-  interface Test1Attributes extends StencilHTMLAttributes {}
-
-  interface WeekDays {}
-  interface WeekDaysAttributes extends StencilHTMLAttributes {}
+  interface MyComponent {}
+  interface MyComponentAttributes extends StencilHTMLAttributes {}
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'CalenderMonth': Components.CalenderMonth;
-    'DatePicker': Components.DatePicker;
-    'MyHeader': Components.MyHeader;
-    'Test1': Components.Test1;
-    'WeekDays': Components.WeekDays;
+    'MyComponent': Components.MyComponent;
   }
 
   interface StencilIntrinsicElements {
-    'calender-month': Components.CalenderMonthAttributes;
-    'date-picker': Components.DatePickerAttributes;
-    'my-header': Components.MyHeaderAttributes;
-    'test-1': Components.Test1Attributes;
-    'week-days': Components.WeekDaysAttributes;
+    'my-component': Components.MyComponentAttributes;
   }
 
 
-  interface HTMLCalenderMonthElement extends Components.CalenderMonth, HTMLStencilElement {}
-  var HTMLCalenderMonthElement: {
-    prototype: HTMLCalenderMonthElement;
-    new (): HTMLCalenderMonthElement;
-  };
-
-  interface HTMLDatePickerElement extends Components.DatePicker, HTMLStencilElement {}
-  var HTMLDatePickerElement: {
-    prototype: HTMLDatePickerElement;
-    new (): HTMLDatePickerElement;
-  };
-
-  interface HTMLMyHeaderElement extends Components.MyHeader, HTMLStencilElement {}
-  var HTMLMyHeaderElement: {
-    prototype: HTMLMyHeaderElement;
-    new (): HTMLMyHeaderElement;
-  };
-
-  interface HTMLTest1Element extends Components.Test1, HTMLStencilElement {}
-  var HTMLTest1Element: {
-    prototype: HTMLTest1Element;
-    new (): HTMLTest1Element;
-  };
-
-  interface HTMLWeekDaysElement extends Components.WeekDays, HTMLStencilElement {}
-  var HTMLWeekDaysElement: {
-    prototype: HTMLWeekDaysElement;
-    new (): HTMLWeekDaysElement;
+  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
+  var HTMLMyComponentElement: {
+    prototype: HTMLMyComponentElement;
+    new (): HTMLMyComponentElement;
   };
 
   interface HTMLElementTagNameMap {
-    'calender-month': HTMLCalenderMonthElement
-    'date-picker': HTMLDatePickerElement
-    'my-header': HTMLMyHeaderElement
-    'test-1': HTMLTest1Element
-    'week-days': HTMLWeekDaysElement
+    'my-component': HTMLMyComponentElement
   }
 
   interface ElementTagNameMap {
-    'calender-month': HTMLCalenderMonthElement;
-    'date-picker': HTMLDatePickerElement;
-    'my-header': HTMLMyHeaderElement;
-    'test-1': HTMLTest1Element;
-    'week-days': HTMLWeekDaysElement;
+    'my-component': HTMLMyComponentElement;
   }
 
 
