@@ -1,0 +1,38 @@
+.calendar {
+    max-width: 350px;
+}
+
+.calendar table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    max-width: 350px;
+}
+
+.calendar table tr td, .calendar table tr th {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 30px;
+}
+
+.calendar table tr td {
+    cursor: pointer;
+}
+
+.calendar table tr td.not-current-month {
+    color: #ccc;
+}
+
+.calendar div {
+    margin: 10px 0 10px 0;
+}
+
+.calendar .button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar button {
+    width: 100px;
+    height: 25px;
+}
