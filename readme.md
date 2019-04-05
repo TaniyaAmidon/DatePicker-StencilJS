@@ -2,4 +2,4 @@
 
 # Stencil Component Starter
 
-#Unfinished project for Stencil Date Picker 
+#Stencil Date Picker 
